@@ -44,3 +44,10 @@ python -m http.server 8000
 2. Settings → Pages で `main` ブランチ / ルートを公開元に設定する
 3. ドメイン管理側で DNS を GitHub Pages に向ける（A レコード 4 件 + www の CNAME）
 4. Pages 設定で "Enforce HTTPS" を有効にする
+
+## 評価表示（トップページの Google / 食べログ）
+
+- 表示データは `data/ratings.json`。トップページの `js/ratings.js` が読み込んで評価帯（`#ratings`）に表示する。
+- **Google**: `.github/workflows/update-ratings.yml` が毎日 03:00（JST）に `scripts/update_google_rating.py` を実行し、Places API から点数・口コミ件数を取得して `data/ratings.json` を更新・コミットする。リポジトリの Secrets に `GOOGLE_MAPS_API_KEY` が必要。初回実行時に `google.query` で店舗を検索して `place_id` を保存する（`matched_name` / `matched_address` で正しい店舗か確認する）。
+- **食べログ**: 自動取得は利用規約上できないため手入力。`tabelog.score` / `tabelog.count` / `tabelog.asof` を店舗ページを見て月 1 回程度更新する。
+- 点数が未取得（null）の間は、その項目は表示されない。
