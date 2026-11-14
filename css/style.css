@@ -82,7 +82,7 @@ p:last-child { margin-bottom: 0; }
 .site-header__logo { display: flex; align-items: center; gap: 10px; }
 .site-header__logo img { width: 56px; height: 56px; }
 .site-header__logo span {
-  font-family: var(--font-serif); font-size: 15px; font-weight: 700; letter-spacing: .06em; line-height: 1.3;
+  font-family: var(--font-serif); font-size: 15px; font-weight: 700; letter-spacing: .06em; line-height: 1.3; white-space: nowrap;
 }
 .site-header__logo small { display: block; font-size: 10px; font-weight: 400; letter-spacing: .18em; color: var(--muted); font-family: var(--font-sans); }
 
@@ -94,7 +94,7 @@ p:last-child { margin-bottom: 0; }
 .global-nav a:hover::after, .global-nav a[aria-current="page"]::after { width: 100%; }
 
 .site-header__actions { display: flex; align-items: center; gap: 12px; }
-.header-reserve { min-width: 0; padding: .55em 1.3em; font-size: 13px; }
+.header-reserve { min-width: 0; padding: .55em 1.3em; font-size: 13px; white-space: nowrap; flex-shrink: 0; }
 
 .nav-toggle {
   display: none; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; position: relative;
@@ -196,7 +196,7 @@ p:last-child { margin-bottom: 0; }
 .feature__media img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; box-shadow: 8px 8px 0 rgba(204, 37, 9, .12); }
 .feature__body h2, .feature__body h3 { font-size: 30px; letter-spacing: .1em; margin-bottom: 20px; line-height: 1.4; }
 .feature__body h2 small { display: block; font-size: 11px; letter-spacing: .3em; color: var(--accent); font-family: var(--font-sans); margin-bottom: 8px; }
-.feature__body p { font-size: 15px; }
+.feature__body p { font-size: 15px; word-break: auto-phrase; text-wrap: pretty; }
 .feature__body .btn { margin-top: 24px; }
 @media (max-width: 767px) {
   .feature { grid-template-columns: 1fr; gap: 24px; }
@@ -246,7 +246,7 @@ p:last-child { margin-bottom: 0; }
 .instagram { text-align: center; }
 .instagram__account { font-family: var(--font-serif); font-size: 20px; letter-spacing: .08em; margin-bottom: 8px; }
 .instagram__account a { border-bottom: 1px solid currentColor; }
-.instagram p { max-width: 600px; margin-left: auto; margin-right: auto; font-size: 15px; }
+.instagram p { max-width: 600px; margin-left: auto; margin-right: auto; font-size: 15px; word-break: auto-phrase; text-wrap: pretty; }
 .instagram__grid {
   display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin: 36px 0 32px;
 }
@@ -285,7 +285,7 @@ p:last-child { margin-bottom: 0; }
 .sister-banner__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
 .sister-banner h2 { font-size: 24px; letter-spacing: .12em; }
 .sister-banner h2 small { display: block; font-family: var(--font-sans); font-size: 11px; letter-spacing: .3em; color: #f3c6b8; font-weight: 400; }
-.sister-banner p { font-size: 14px; color: #ddd; margin: 8px 0 0; }
+.sister-banner p { font-size: 14px; color: #ddd; margin: 8px 0 0; word-break: auto-phrase; text-wrap: pretty; }
 .sister-banner__logos { display: flex; gap: 10px; flex-wrap: wrap; }
 .sister-banner__logos img { width: 120px; aspect-ratio: 3 / 2; object-fit: cover; border: 1px solid #444; }
 @media (max-width: 767px) {
@@ -335,7 +335,7 @@ p:last-child { margin-bottom: 0; }
   .page-header h1 { font-size: 26px; }
 }
 
-.page-lead { text-align: center; max-width: 760px; margin: 0 auto 56px; font-size: 15px; }
+.page-lead { text-align: center; max-width: 760px; margin: 0 auto 56px; font-size: 15px; word-break: auto-phrase; text-wrap: pretty; }
 
 /* 下層: 画像+テキスト ブロックの連続 */
 .feature-list > .feature + .feature { margin-top: 96px; }
@@ -344,11 +344,12 @@ p:last-child { margin-bottom: 0; }
 /* ---------- メニュー（お料理・お飲み物） ---------- */
 .menu-section { display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: start; }
 .menu-section + .menu-section { margin-top: 80px; }
+.menu-section:nth-child(even) { grid-template-columns: 7fr 5fr; }
 .menu-section:nth-child(even) .menu-section__media { order: 2; }
 .menu-section__media { position: sticky; top: calc(var(--header-h) + 24px); }
 .menu-section__media img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; box-shadow: 8px 8px 0 rgba(204, 37, 9, .12); }
-.menu-section__body h2 { font-size: 26px; letter-spacing: .14em; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--black); display: flex; align-items: baseline; gap: 14px; }
-.menu-section__body h2 small { font-family: var(--font-sans); font-size: 11px; letter-spacing: .3em; color: var(--accent); font-weight: 400; }
+.menu-section__body h2 { font-size: 26px; letter-spacing: .14em; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--black); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+.menu-section__body h2 small { font-family: var(--font-sans); font-size: 11px; letter-spacing: .3em; color: var(--accent); font-weight: 400; white-space: nowrap; }
 .menu-section__body h3 { font-size: 16px; letter-spacing: .12em; margin: 28px 0 8px; color: var(--accent); }
 .menu-section__body h3:first-of-type { margin-top: 0; }
 .menu-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px dotted #c9c2b5; font-size: 15px; }
@@ -359,7 +360,7 @@ p:last-child { margin-bottom: 0; }
 .menu-note { margin-top: 48px; padding: 20px 24px; background: var(--paper); border: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 .menu-note p { margin: 0; }
 @media (max-width: 767px) {
-  .menu-section { grid-template-columns: 1fr; gap: 20px; }
+  .menu-section, .menu-section:nth-child(even) { grid-template-columns: 1fr; gap: 20px; }
   .menu-section + .menu-section { margin-top: 56px; }
   .menu-section:nth-child(even) .menu-section__media { order: 0; }
   .menu-section__media { position: static; }
@@ -370,17 +371,19 @@ p:last-child { margin-bottom: 0; }
 /* ---------- コース ---------- */
 .course { display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: start; }
 .course + .course { margin-top: 88px; }
+.course:nth-child(even) { grid-template-columns: 7fr 5fr; }
 .course:nth-child(even) .course__media { order: 2; }
 .course__media img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; box-shadow: 8px 8px 0 rgba(204, 37, 9, .12); }
 .course__body h2 { font-size: 28px; letter-spacing: .1em; line-height: 1.4; margin-bottom: 16px; }
 .course__price { font-family: var(--font-serif); font-size: 17px; letter-spacing: .06em; margin-bottom: 20px; padding: 14px 18px; background: var(--paper); border-left: 3px solid var(--accent); }
 .course__price span { display: block; }
-.course__price b { color: var(--accent); font-size: 1.15em; }
+.course__price .tax { display: inline-block; white-space: nowrap; }
+.course__price b { color: var(--accent); font-size: 1.15em; white-space: nowrap; }
 .course__items li { padding: 7px 0; border-bottom: 1px dotted #c9c2b5; font-size: 15px; }
 .course__items li::before { content: "・"; color: var(--accent); }
 .course__note { font-size: 12px; color: var(--muted); margin-top: 14px; }
 @media (max-width: 767px) {
-  .course { grid-template-columns: 1fr; gap: 20px; }
+  .course, .course:nth-child(even) { grid-template-columns: 1fr; gap: 20px; }
   .course + .course { margin-top: 56px; }
   .course:nth-child(even) .course__media { order: 0; }
   .course__body h2 { font-size: 22px; }
@@ -395,7 +398,7 @@ p:last-child { margin-bottom: 0; }
 .plan__lead { font-size: 14px; margin-bottom: 20px; }
 .plan__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 40px; }
 .plan__grid h3 { font-size: 15px; letter-spacing: .1em; color: var(--accent); margin-bottom: 4px; }
-.plan__grid p { font-size: 14px; }
+.plan__grid p { font-size: 14px; text-wrap: pretty; }
 @media (max-width: 767px) {
   .plan { margin-top: 64px; }
   .plan__grid { grid-template-columns: 1fr; gap: 16px; }
@@ -408,7 +411,7 @@ p:last-child { margin-bottom: 0; }
 .store-card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .store-card__body { padding: 22px 22px 26px; display: flex; flex-direction: column; flex: 1; }
 .store-card h2 { font-size: 20px; letter-spacing: .08em; margin-bottom: 10px; line-height: 1.4; }
-.store-card .catch { font-size: 14px; margin-bottom: 14px; flex: 1; }
+.store-card .catch { font-size: 14px; margin-bottom: 14px; flex: 1; word-break: auto-phrase; text-wrap: pretty; }
 .store-card dl { margin: 0 0 18px; font-size: 13px; color: var(--muted); }
 .store-card dt { font-weight: 700; color: var(--text); margin-top: 6px; }
 .store-card dd { margin: 0; }
