@@ -118,7 +118,7 @@ p:last-child { margin-bottom: 0; }
   .global-nav {
     position: fixed; inset: var(--header-h) 0 0 0; z-index: 90;
     background: var(--cream);
-    background-image: url("/images/bg-hero.webp"); background-size: cover; background-position: center;
+    background-image: url("../images/bg-hero.webp"); background-size: cover; background-position: center;
     padding: 32px 24px 120px; overflow-y: auto;
     transform: translateX(100%); transition: transform .35s ease;
   }
@@ -136,7 +136,7 @@ p:last-child { margin-bottom: 0; }
 /* ---------- ヒーロー ---------- */
 .hero {
   position: relative; overflow: hidden;
-  background: var(--cream) url("/images/bg-hero.webp") center / cover no-repeat;
+  background: var(--cream) url("../images/bg-hero.webp") center / cover no-repeat;
   padding: 72px 0 64px;
   text-align: center;
 }
@@ -207,18 +207,18 @@ p:last-child { margin-bottom: 0; }
 
 /* 既存サイトの串シルエット背景を再現 */
 .section--deco-right, .section--deco-left { background-color: var(--cream); background-repeat: no-repeat; background-size: contain; }
-.section--deco-right { background-image: url("/images/bg-yakitori-01.webp"); background-position: center right; }
-.section--deco-left  { background-image: url("/images/bg-yakitori-04.webp"); background-position: center left; }
+.section--deco-right { background-image: url("../images/bg-yakitori-01.webp"); background-position: center right; }
+.section--deco-left  { background-image: url("../images/bg-yakitori-04.webp"); background-position: center left; }
 .section--texture { background-color: var(--cream-2); }
 .section--texture::before {
-  content: ""; position: absolute; inset: 0; background: url("/images/bg-texture.webp") center / cover; opacity: .25; pointer-events: none;
+  content: ""; position: absolute; inset: 0; background: url("../images/bg-texture.webp") center / cover; opacity: .25; pointer-events: none;
 }
 .section--texture > * { position: relative; }
 
 /* 席・空間（暗い背景写真 + 白文字） */
 .section--dark {
   color: var(--white);
-  background: var(--black) url("/images/space-bg.webp") center / cover no-repeat;
+  background: var(--black) url("../images/space-bg.webp") center / cover no-repeat;
 }
 .section--dark::before { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .6); }
 .section--dark > * { position: relative; }
@@ -256,7 +256,7 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 767px) { .instagram__grid { grid-template-columns: repeat(4, 1fr); } }
 
 /* ---------- 店舗情報 ---------- */
-.access { background: var(--cream) url("/images/bg-footer.webp") center / cover no-repeat; }
+.access { background: var(--cream) url("../images/bg-footer.webp") center / cover no-repeat; }
 .access::before { content: ""; position: absolute; inset: 0; background: rgba(255, 249, 238, .72); }
 .access > * { position: relative; }
 .access__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
@@ -322,7 +322,7 @@ p:last-child { margin-bottom: 0; }
 /* ---------- 下層ページ ---------- */
 .page-header {
   position: relative; padding: 64px 0 56px; text-align: center;
-  background: var(--cream) url("/images/bg-hero.webp") center / cover no-repeat;
+  background: var(--cream) url("../images/bg-hero.webp") center / cover no-repeat;
 }
 .page-header::before { content: ""; position: absolute; inset: 0; background: rgba(255, 249, 238, .5); }
 .page-header > * { position: relative; }
