@@ -1,14 +1,41 @@
 {
   "domain": "yakitori-nextcircle.com",
-  "name": "焼鳥 ネクストサークル",
+  "name": "ヤキトリネクストサークル",
+  "name_en": "YAKITORI NEXT CIRCLE",
   "kind": "store",
-  "tagline": "",
-  "address": "",
-  "tel": "",
-  "hours": "",
-  "closed": "",
-  "access": "",
-  "instagram": "",
-  "reservation_url": "",
-  "google_maps_url": ""
+  "tagline": "錦糸町のおしゃれな空間でご褒美焼き鳥",
+  "description": "錦糸町駅徒歩3分。お仕事終わりや週末に、気軽に立ち寄れる焼き鳥居酒屋『ヤキトリネクストサークル』です！トレンド感のあるおしゃれな店内と本物志向の焼き鳥は、自分にちょっとしたご褒美を与えてくれる、特別な空間に。カジュアルなデートや、飲み会などにぜひお立ち寄り下さい。",
+  "postal_code": "〒130-0022",
+  "address": "東京都墨田区江東橋2-16-8 1F",
+  "tel": "03-3631-3880",
+  "hours": [
+    { "days": "月～金・祝前日・祝後日", "open": "17:00", "close": "24:00", "last_order": "L.O.料理23:00 ドリンク23:30" },
+    { "days": "土・日・祝日", "open": "13:00", "close": "24:00", "last_order": "L.O.料理23:00 ドリンク23:30" }
+  ],
+  "closed": "なし",
+  "access": [
+    "JR中央・総武線/錦糸町駅(南口)徒歩3分",
+    "東京メトロ半蔵門線/錦糸町駅徒歩4分"
+  ],
+  "instagram": "https://www.instagram.com/yakitori_nextcircle/",
+  "instagram_account": "@yakitori_nextcircle",
+  "reservation_url": "https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13307488",
+  "recruit_url": "https://pay-it-forward-corporate.com/recruit/",
+  "google_maps_url": "https://www.google.com/maps/dir/?api=1&destination=%E3%83%A4%E3%82%AD%E3%83%88%E3%83%AA%E3%83%8D%E3%82%AF%E3%82%B9%E3%83%88%E3%82%B5%E3%83%BC%E3%82%AF%E3%83%AB",
+  "google_maps_embed": "https://www.google.com/maps?q=%E3%80%92130-0022%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A2%A8%E7%94%B0%E5%8C%BA%E6%B1%9F%E6%9D%B1%E6%A9%8B2-16-8%201F&output=embed",
+  "ogp_image": "/images/ogp.jpg",
+  "copyright_year": 2026,
+  "operator": "株式会社Pay it Forward",
+  "pages": [
+    { "path": "/", "title": "ホーム" },
+    { "path": "/information/", "title": "お知らせ" },
+    { "path": "/concept/", "title": "こだわり" },
+    { "path": "/course/", "title": "コース" },
+    { "path": "/food/", "title": "お料理" },
+    { "path": "/drink/", "title": "お飲み物" },
+    { "path": "/space/", "title": "席・空間" },
+    { "path": "/sister-store/", "title": "系列店紹介" },
+    { "path": "/privacy/", "title": "プライバシーポリシー" },
+    { "path": "/category/", "title": "お知らせ（旧URL → /information/ へ転送）" }
+  ]
 }

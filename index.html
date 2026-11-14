@@ -3,49 +3,270 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>焼鳥 ネクストサークル</title>
-  <meta name="description" content="焼鳥 ネクストサークル の公式サイトです。">
-  <link rel="stylesheet" href="css/style.css">
+  <title>【公式】ヤキトリネクストサークル - 錦糸町のおしゃれな空間でご褒美焼き鳥</title>
+  <meta name="description" content="錦糸町駅徒歩3分。お仕事終わりや週末に、気軽に立ち寄れる焼き鳥居酒屋『ヤキトリネクストサークル』です！トレンド感のあるおしゃれな店内と本物志向の焼き鳥は、自分にちょっとしたご褒美を与えてくれる、特別な空間に。カジュアルなデートや、飲み会などにぜひお立ち寄り下さい。">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="【公式】ヤキトリネクストサークル - 錦糸町のおしゃれな空間でご褒美焼き鳥">
+  <meta property="og:description" content="錦糸町駅徒歩3分。お仕事終わりや週末に、気軽に立ち寄れる焼き鳥居酒屋『ヤキトリネクストサークル』です！トレンド感のあるおしゃれな店内と本物志向の焼き鳥は、自分にちょっとしたご褒美を与えてくれる、特別な空間に。カジュアルなデートや、飲み会などにぜひお立ち寄り下さい。">
+  <meta property="og:url" content="https://yakitori-nextcircle.com/">
+  <meta property="og:site_name" content="【公式】ヤキトリネクストサークル">
+  <meta property="og:image" content="https://yakitori-nextcircle.com/images/ogp.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yakitori-nextcircle.com/">
+  <link rel="icon" href="/images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="site-header">
-    <h1 class="brand">焼鳥 ネクストサークル</h1>
-    <nav class="nav">
-      <a href="#about">お店について</a>
-      <a href="#menu">メニュー</a>
-      <a href="#access">アクセス</a>
-    </nav>
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="/">
+        <img src="/images/logo.png" alt="" width="56" height="56">
+        <span>ヤキトリネクストサークル<small>YAKITORI NEXT CIRCLE</small></span>
+      </a>
+      <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
+        <ul>
+        <li><a href="/" aria-current="page">ホーム</a></li>
+        <li><a href="/information/">お知らせ</a></li>
+        <li><a href="/concept/">こだわり</a></li>
+        <li><a href="/course/">コース</a></li>
+        <li><a href="/food/">お料理</a></li>
+        <li><a href="/drink/">お飲み物</a></li>
+        <li><a href="/space/">席・空間</a></li>
+        <li><a href="/sister-store/">系列店紹介</a></li>
+        <li><a href="/#access">店舗情報</a></li>
+        <li class="nav-reserve"><a class="btn btn--accent" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13307488" target="_blank" rel="noopener">WEB予約</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--accent header-reserve" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13307488" target="_blank" rel="noopener">WEB予約</a>
+        <button class="nav-toggle" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
-
   <main>
     <section class="hero">
-      <p class="hero-copy">ただいま準備中です</p>
-      <p class="hero-sub">yakitori-nextcircle.com</p>
+      <div class="hero__inner">
+        <img class="hero__logo" src="/images/logo-hero.webp" alt="ヤキトリネクストサークル YAKITORI NEXT CIRCLE" width="512" height="512">
+        <p class="hero__lead">
+          外に面した焼き台から香る、香ばしい匂い。<br>
+          珍しい希少な部位もお楽しみいただける大振りな焼き鳥をご提供いたします。<br>
+          お立ち寄りやすい雰囲気のある店内です。<br>
+          錦糸町でサクッと飲みたい方は、ぜひ<strong>「ヤキトリネクストサークル」</strong>へお越しください！
+        </p>
+        <a class="btn" href="/concept/">こだわり</a>
+      </div>
     </section>
 
-    <section id="about" class="section">
-      <h2>お店について</h2>
-      <p>ここにお店の紹介文を入れます。</p>
+    <div class="carousel" aria-label="店内・お料理の写真">
+      <div class="carousel__track">
+          <div class="carousel__item"><img src="/images/carousel-01.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-02.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-03.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-04.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-05.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-06.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-07.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-08.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-09.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-10.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-11.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-12.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-13.webp" alt="" loading="lazy" width="768" height="512"></div>
+          <div class="carousel__item"><img src="/images/carousel-14.webp" alt="" loading="lazy" width="768" height="512"></div>
+      </div>
+    </div>
+
+    <section class="section section--deco-right">
+      <div class="container">
+        <div class="feature">
+          <div class="feature__media"><img src="/images/top-course.jpg" alt="コース料理" loading="lazy"></div>
+          <div class="feature__body">
+            <h2><small>COURSE</small>コース</h2>
+            <p>焼き鳥はもちろん、様々な鶏料理をご堪能いただけるコースをご用意いたしました。<br>女子会や同期会、職場のご宴会などにぜひご利用ください。</p>
+            <a class="btn" href="/course/">コース</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="menu" class="section">
-      <h2>メニュー</h2>
-      <p>ここにおすすめメニューを入れます。</p>
+    <section class="section section--deco-left">
+      <div class="container">
+        <div class="feature feature--reverse">
+          <div class="feature__media"><img src="/images/top-food.webp" alt="焼き鳥の盛り合わせ" loading="lazy"></div>
+          <div class="feature__body">
+            <h2><small>FOOD</small>お料理</h2>
+            <p>焼き鳥は、レアな部位や野菜焼きといったアレンジを加えたメニューをご堪能いただけます。<br>その他にも鶏を含めたオリジナルの逸品を取り揃えております！<br>もちろん女性に嬉しいデザートも♪<br>お気軽に本格焼き鳥をお楽しみいただけます。</p>
+            <a class="btn" href="/food/">お料理</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="access" class="section">
-      <h2>アクセス</h2>
-      <dl class="info">
-        <dt>住所</dt><dd>-</dd>
-        <dt>電話</dt><dd>-</dd>
-        <dt>営業時間</dt><dd>-</dd>
-        <dt>定休日</dt><dd>-</dd>
-      </dl>
+    <section class="section section--deco-right">
+      <div class="container">
+        <div class="feature">
+          <div class="feature__media"><img src="/images/top-drink.jpg" alt="お飲み物" loading="lazy"></div>
+          <div class="feature__body">
+            <h2><small>DRINK</small>お飲み物</h2>
+            <p>ビールにホッピー、ワインに日本酒・焼酎などお料理に合う事間違いなしのメニューです！<br>静岡のお茶割や、果実酒などもございます。<br>お気軽にサクッと一杯いかがでしょうか？</p>
+            <a class="btn" href="/drink/">お飲み物</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <div class="feature feature--reverse">
+          <div class="feature__media"><img src="/images/space-01.webp" alt="店内の様子" loading="lazy"></div>
+          <div class="feature__body">
+            <h2><small>SPACE</small>席・空間</h2>
+            <p>思わず足を運びたくなる、そんなノスタルジックでお洒落な雰囲気のお店です。<br>女性の方も入りやすいやさしい木目調の店内で、本格的な焼き鳥をご堪能ください。<br>職場仲間やご友人、またはお仕事終わりの一杯に、ぜひお立ち寄りください！</p>
+            <a class="btn btn--light" href="/space/">席・空間</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container">
+        <h2 class="section__title"><small>NEWS</small>お知らせ</h2>
+        <ul class="news-list">
+          <li><a href="/information/#news-9306"><time datetime="2026-06-22">2026年06月22日</time><span>コースメニューが新しくなりました！</span></a></li>
+          <li><a href="/information/#news-9264"><time datetime="2026-05-15">2026年05月15日</time><span>お料理・お飲み物メニューが新しくなりました！</span></a></li>
+          <li><a href="/information/#news-9188"><time datetime="2026-02-12">2026年02月12日</time><span>お料理メニューが新しくなりました！</span></a></li>
+          <li><a href="/information/#news-9168"><time datetime="2026-01-14">2026年01月14日</time><span>営業時間変更のお知らせ</span></a></li>
+          <li><a href="/information/#news-9155"><time datetime="2025-12-02">2025年12月02日</time><span>年末年始の営業のご案内</span></a></li>
+        </ul>
+        <p class="section__more"><a class="btn btn--outline" href="/information/">お知らせ一覧</a></p>
+      </div>
+    </section>
+
+    <section class="section section--texture instagram" id="instagram">
+      <div class="container">
+        <h2 class="section__title"><small>INSTAGRAM</small>Instagram</h2>
+        <p class="instagram__account"><a href="https://www.instagram.com/yakitori_nextcircle/" target="_blank" rel="noopener">@yakitori_nextcircle</a></p>
+        <p>新メニューやイベント、営業時間のお知らせなど最新情報は Instagram で発信しています。</p>
+        <div class="instagram__grid">
+          <img src="/images/carousel-03.webp" alt="" loading="lazy">
+          <img src="/images/carousel-05.webp" alt="" loading="lazy">
+          <img src="/images/carousel-06.webp" alt="" loading="lazy">
+          <img src="/images/carousel-10.webp" alt="" loading="lazy">
+          <img src="/images/carousel-11.webp" alt="" loading="lazy">
+          <img src="/images/carousel-13.webp" alt="" loading="lazy">
+        </div>
+        <a class="btn btn--accent" href="https://www.instagram.com/yakitori_nextcircle/" target="_blank" rel="noopener">Instagramでフォロー</a>
+      </div>
+    </section>
+
+    <section class="section access" id="access">
+      <div class="container">
+        <h2 class="section__title"><small>ACCESS</small>店舗情報</h2>
+        <div class="access__grid">
+          <div>
+            <h3 class="access__name">ヤキトリネクストサークル</h3>
+            <dl>
+              <div>
+                <dt>住所</dt>
+                <dd>〒130-0022<br>東京都墨田区江東橋2-16-8 1F</dd>
+              </div>
+              <div>
+                <dt>電話番号</dt>
+                <dd><a href="tel:03-3631-3880">03-3631-3880</a></dd>
+              </div>
+              <div>
+                <dt>営業時間</dt>
+                <dd class="access__hours">
+                  <p>＜月～金・祝前日・祝後日＞<br>17:00～24:00<br><span class="note">(L.O.料理23:00 ドリンク23:30)</span></p>
+                  <p>＜土・日・祝日＞<br>13:00～24:00<br><span class="note">(L.O.料理23:00 ドリンク23:30)</span></p>
+                </dd>
+              </div>
+              <div>
+                <dt>定休日</dt>
+                <dd>なし</dd>
+              </div>
+              <div>
+                <dt>アクセス</dt>
+                <dd>JR中央・総武線/錦糸町駅(南口)徒歩3分<br>東京メトロ半蔵門線/錦糸町駅徒歩4分</dd>
+              </div>
+            </dl>
+            <div class="access__buttons">
+              <a class="btn btn--accent" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13307488" target="_blank" rel="noopener">WEB予約</a>
+              <a class="btn btn--outline" href="https://www.instagram.com/yakitori_nextcircle/" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+          <div>
+            <iframe class="access__map" src="https://www.google.com/maps?q=%E3%80%92130-0022%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A2%A8%E7%94%B0%E5%8C%BA%E6%B1%9F%E6%9D%B1%E6%A9%8B2-16-8%201F&output=embed" title="ヤキトリネクストサークルの地図" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="access__map-link"><a href="https://www.google.com/maps/dir/?api=1&destination=%E3%83%A4%E3%82%AD%E3%83%88%E3%83%AA%E3%83%8D%E3%82%AF%E3%82%B9%E3%83%88%E3%82%B5%E3%83%BC%E3%82%AF%E3%83%AB" target="_blank" rel="noopener">Google マップで経路を見る</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sister-banner">
+      <div class="container sister-banner__inner">
+        <div>
+          <h2><small>SISTER STORES</small>系列店紹介</h2>
+          <p>錦糸町・門前仲町・平井で、マグロ・炉端・焼き鳥のお店を展開しています。</p>
+          <a class="btn btn--light" href="/sister-store/" style="margin-top:18px">系列店を見る</a>
+        </div>
+        <div class="sister-banner__logos">
+          <a href="https://maguro-standard-kinshicho.com/" target="_blank" rel="noopener"><img src="/images/sister-standard-kinshicho.jpg" alt="マグロスタンダード 錦糸町本店" loading="lazy"></a>
+          <a href="https://maguro-robata-naru.com/" target="_blank" rel="noopener"><img src="/images/sister-robata-naru.jpg" alt="マグロと炉端 成る" loading="lazy"></a>
+          <a href="https://maguro-standard.com/" target="_blank" rel="noopener"><img src="/images/sister-standard-monnaka.jpg" alt="マグロスタンダード 門前仲町店" loading="lazy"></a>
+          <a href="https://yakitori-major.com/" target="_blank" rel="noopener"><img src="/images/sister-major.jpg" alt="焼鶏 メジャー" loading="lazy"></a>
+          <a href="https://kinshicho-sumibi-naru.com/" target="_blank" rel="noopener"><img src="/images/sister-sumibi-naru.jpg" alt="錦糸町 炭火 成る" loading="lazy"></a>
+          <a href="https://tabelog.com/tokyo/A1312/A131202/13325262/" target="_blank" rel="noopener"><img src="/images/sister-naru-hirai.webp" alt="炉端 成る 平井店" loading="lazy"></a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <small>&copy; 2026 焼鳥 ネクストサークル</small>
+    <div class="container site-footer__inner">
+      <img class="site-footer__logo" src="/images/logo.png" alt="ヤキトリネクストサークル">
+      <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+        <a href="/">ホーム</a>
+        <a href="/information/">お知らせ</a>
+        <a href="/concept/">こだわり</a>
+        <a href="/course/">コース</a>
+        <a href="/food/">お料理</a>
+        <a href="/drink/">お飲み物</a>
+        <a href="/space/">席・空間</a>
+        <a href="/sister-store/">系列店紹介</a>
+        <a href="/#access">店舗情報</a>
+      </nav>
+      <div class="site-footer__links">
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="https://pay-it-forward-corporate.com/recruit/" target="_blank" rel="noopener">採用情報</a>
+      </div>
+      <small>&copy; 2026 ヤキトリネクストサークル</small>
+    </div>
   </footer>
+
+  <nav class="bottom-bar" aria-label="クイックメニュー">
+    <a href="tel:03-3631-3880">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+      電話
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=%E3%83%A4%E3%82%AD%E3%83%88%E3%83%AA%E3%83%8D%E3%82%AF%E3%82%B9%E3%83%88%E3%82%B5%E3%83%BC%E3%82%AF%E3%83%AB" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      地図
+    </a>
+    <a href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13307488" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      WEB予約
+    </a>
+  </nav>
+  <a class="pagetop" href="#" aria-label="ページ上部へ">&#8593;</a>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>
