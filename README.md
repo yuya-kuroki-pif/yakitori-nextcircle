@@ -51,3 +51,10 @@ python -m http.server 8000
 - **Google**: `.github/workflows/update-ratings.yml` が毎日 03:00（JST）に `scripts/update_google_rating.py` を実行し、Places API から点数・口コミ件数を取得して `data/ratings.json` を更新・コミットする。リポジトリの Secrets に `GOOGLE_MAPS_API_KEY` が必要。初回実行時に `google.query` で店舗を検索して `place_id` を保存する（`matched_name` / `matched_address` で正しい店舗か確認する）。
 - **食べログ**: 自動取得は利用規約上できないため手入力。`tabelog.score` / `tabelog.count` / `tabelog.asof` を店舗ページを見て月 1 回程度更新する。
 - 点数が未取得（null）の間は、その項目は表示されない。
+
+## Cloudflare へのデプロイ
+
+- `main` に push すると `.github/workflows/deploy-cloudflare.yml` が Cloudflare Workers（静的アセット）へデプロイする（Worker 名 `yakitori-nextcircle`）。毎日 03:30 JST にも実行され、評価データの更新を反映する。
+- リポジトリの Secrets に `CLOUDFLARE_API_TOKEN` と `CLOUDFLARE_ACCOUNT_ID` が必要。
+- `scripts/cloudflare_config.py` が Cloudflare 上のゾーンの状態を見て、ネームサーバー切替済み（active）なら独自ドメインと www を Custom Domain として自動で付ける。切替前は workers.dev の URL のみ。
+- 設定本体は `wrangler.json`。デプロイ時に `_site/`（公開ファイルだけを集めたもの）と `wrangler.deploy.json` が生成されるが、どちらも git 管理外。

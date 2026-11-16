@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developers.cloudflare.com/workers/wrangler/config-schema.json",
+  "name": "yakitori-nextcircle",
+  "compatibility_date": "2026-11-16",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./_site",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}
