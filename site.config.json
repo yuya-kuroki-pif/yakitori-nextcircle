@@ -9,8 +9,18 @@
   "address": "東京都墨田区江東橋2-16-8 1F",
   "tel": "03-3631-3880",
   "hours": [
-    { "days": "月～金・祝前日・祝後日", "open": "17:00", "close": "24:00", "last_order": "L.O.料理23:00 ドリンク23:30" },
-    { "days": "土・日・祝日", "open": "13:00", "close": "24:00", "last_order": "L.O.料理23:00 ドリンク23:30" }
+    {
+      "days": "月～金・祝前日・祝後日",
+      "open": "17:00",
+      "close": "24:00",
+      "last_order": "L.O.料理23:00 ドリンク23:30"
+    },
+    {
+      "days": "土・日・祝日",
+      "open": "13:00",
+      "close": "24:00",
+      "last_order": "L.O.料理23:00 ドリンク23:30"
+    }
   ],
   "closed": "なし",
   "access": [
@@ -27,15 +37,65 @@
   "copyright_year": 2026,
   "operator": "株式会社Pay it Forward",
   "pages": [
-    { "path": "/", "title": "ホーム" },
-    { "path": "/information/", "title": "お知らせ" },
-    { "path": "/concept/", "title": "こだわり" },
-    { "path": "/course/", "title": "コース" },
-    { "path": "/food/", "title": "お料理" },
-    { "path": "/drink/", "title": "お飲み物" },
-    { "path": "/space/", "title": "席・空間" },
-    { "path": "/sister-store/", "title": "系列店紹介" },
-    { "path": "/privacy/", "title": "プライバシーポリシー" },
-    { "path": "/category/", "title": "お知らせ（旧URL → /information/ へ転送）" }
+    {
+      "path": "/",
+      "title": "ホーム"
+    },
+    {
+      "path": "/information/",
+      "title": "お知らせ"
+    },
+    {
+      "path": "/concept/",
+      "title": "こだわり"
+    },
+    {
+      "path": "/course/",
+      "title": "コース"
+    },
+    {
+      "path": "/food/",
+      "title": "お料理"
+    },
+    {
+      "path": "/drink/",
+      "title": "お飲み物"
+    },
+    {
+      "path": "/space/",
+      "title": "席・空間"
+    },
+    {
+      "path": "/sister-store/",
+      "title": "系列店紹介"
+    },
+    {
+      "path": "/privacy/",
+      "title": "プライバシーポリシー"
+    },
+    {
+      "path": "/category/",
+      "title": "お知らせ（旧URL → /information/ へ転送）"
+    }
+  ],
+  "dns_records": [
+    {
+      "type": "A",
+      "name": "mail",
+      "content": "162.43.101.78",
+      "proxied": false,
+      "note": "旧 Xserver のメールサーバー（切替前の MX 相当を維持）"
+    },
+    {
+      "type": "MX",
+      "name": "@",
+      "content": "mail.yakitori-nextcircle.com",
+      "priority": 0
+    },
+    {
+      "type": "TXT",
+      "name": "@",
+      "content": "v=spf1 +a:sv14877.xserver.jp +a:yakitori-nextcircle.com +mx include:spf.sender.xserver.jp ~all"
+    }
   ]
 }

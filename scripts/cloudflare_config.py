@@ -58,6 +58,37 @@ def ensure_workers_subdomain():
 
 ensure_workers_subdomain()
 
+
+def ensure_dns_records():
+    """site.config.json の dns_records（メール用 MX/SPF など）が無ければ作成する。ゾーンが pending でも作れる。"""
+    recs = site.get("dns_records") or []
+    if not recs or not TOKEN:
+        return
+    z = api("GET", "/zones?name=" + urllib.parse.quote(domain))
+    zones = z.get("result") or []
+    if not zones:
+        print(f"[cloudflare] {domain}: ゾーン未作成のため dns_records をスキップ")
+        return
+    zid = zones[0]["id"]
+    for rec in recs:
+        name = domain if rec["name"] in ("@", domain) else f"{rec['name']}.{domain}"
+        cur = api("GET", f"/zones/{zid}/dns_records?type={rec['type']}&name=" + urllib.parse.quote(name))
+        if cur.get("result"):
+            print(f"[cloudflare] DNS {rec['type']} {name}: 既存")
+            continue
+        body = {"type": rec["type"], "name": name, "content": rec["content"], "ttl": 1,
+                "proxied": bool(rec.get("proxied", False))}
+        if rec["type"] == "MX":
+            body["priority"] = int(rec.get("priority", 0))
+        if rec["type"] in ("MX", "TXT"):
+            body.pop("proxied", None)
+        res = api("POST", f"/zones/{zid}/dns_records", body)
+        ok = "作成" if res.get("success") else res.get("errors")
+        print(f"[cloudflare] DNS {rec['type']} {name} -> {rec['content']}: {ok}")
+
+
+ensure_dns_records()
+
 if not attach:
     print(f"[cloudflare] {domain}: 独自ドメインは付けない設定（workers.dev のみ）")
 elif not TOKEN:
