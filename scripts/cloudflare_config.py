@@ -38,6 +38,26 @@ cfg = json.load(open("wrangler.json", encoding="utf-8"))
 cfg["assets"]["directory"] = "./_site"
 routes = []
 
+
+def ensure_workers_subdomain():
+    """workers.dev サブドメインが未登録なら登録する（アカウント共通・1 回だけ）。"""
+    if not TOKEN or not ACCOUNT:
+        return
+    cur = api("GET", f"/accounts/{ACCOUNT}/workers/subdomain")
+    if cur.get("success") and (cur.get("result") or {}).get("subdomain"):
+        print(f"[cloudflare] workers.dev サブドメイン: {cur['result']['subdomain']}.workers.dev")
+        return
+    for name in ("pay-it-forward", "pif-stores", "pif-sites", "pif-" + ACCOUNT[:8]):
+        res = api("PUT", f"/accounts/{ACCOUNT}/workers/subdomain", {"subdomain": name})
+        if res.get("success"):
+            print(f"[cloudflare] workers.dev サブドメインを登録: {name}.workers.dev")
+            return
+        print(f"[cloudflare] サブドメイン {name} は登録できず: {res.get('errors')}")
+    print("[cloudflare] workers.dev サブドメインを登録できませんでした。ダッシュボード Workers & Pages で手動登録してください")
+
+
+ensure_workers_subdomain()
+
 if not attach:
     print(f"[cloudflare] {domain}: 独自ドメインは付けない設定（workers.dev のみ）")
 elif not TOKEN:
