@@ -11,7 +11,7 @@ index.html                トップ（ヒーロー → 写真カルーセル →
 information/index.html    お知らせ一覧（全 11 件の本文を掲載。トップからは #news-<id> で各記事へリンク）
 category/index.html       旧 URL (/category/) からの転送ページ → /information/
 concept/index.html        こだわり
-course/index.html         コース（入門コース・満腹コース・飲み放題プラン）
+course/index.html         コース（スタンダードコース・堪能コース・飲み放題内容）
 food/index.html           お料理（税込価格）
 drink/index.html          お飲み物（税込価格）
 space/index.html          席・空間

@@ -10,18 +10,34 @@
   "tel": "03-3631-3880",
   "hours": [
     {
-      "days": "月～金・祝前日・祝後日",
+      "days": "月～木",
       "open": "17:00",
-      "close": "24:00",
-      "last_order": "L.O.料理23:00 ドリンク23:30"
+      "close": "23:00",
+      "last_order": "L.O.22:00"
     },
     {
-      "days": "土・日・祝日",
+      "days": "金・祝前日",
+      "open": "17:00",
+      "close": "24:00",
+      "last_order": "L.O.23:00"
+    },
+    {
+      "days": "土",
       "open": "13:00",
       "close": "24:00",
-      "last_order": "L.O.料理23:00 ドリンク23:30"
+      "last_order": "L.O.23:00"
+    },
+    {
+      "days": "日・祝日",
+      "open": "13:00",
+      "close": "23:00",
+      "last_order": "L.O.22:00"
     }
   ],
+  "seats": "34席",
+  "private_party": "貸切可（20～50名様）",
+  "smoking": "全席禁煙",
+  "payment": "カード可（VISA / Master / JCB）、PayPay可、電子マネー不可",
   "closed": "なし",
   "access": [
     "JR中央・総武線/錦糸町駅(南口)徒歩3分",
