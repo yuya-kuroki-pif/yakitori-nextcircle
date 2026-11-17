@@ -94,24 +94,5 @@
       "title": "お知らせ（旧URL → /information/ へ転送）"
     }
   ],
-  "dns_records": [
-    {
-      "type": "A",
-      "name": "mail",
-      "content": "162.43.101.78",
-      "proxied": false,
-      "note": "旧 Xserver のメールサーバー（切替前の MX 相当を維持）"
-    },
-    {
-      "type": "MX",
-      "name": "@",
-      "content": "mail.yakitori-nextcircle.com",
-      "priority": 0
-    },
-    {
-      "type": "TXT",
-      "name": "@",
-      "content": "v=spf1 +a:sv14877.xserver.jp +a:yakitori-nextcircle.com +mx include:spf.sender.xserver.jp ~all"
-    }
-  ]
+  "email_routing": "Cloudflare Email Routing（2026-11-17 設定）: 全アドレス宛を yuya-kuroki@pay-it-forward-co.com へ転送。MX/SPF/DKIM は Cloudflare 管理のため dns_records には書かない。"
 }
