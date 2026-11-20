@@ -7,7 +7,7 @@ GitHub Pages で公開できる静的 HTML/CSS/JS サイトとして作り直し
 ## 構成
 
 ```
-index.html                トップ（ヒーロー → 写真カルーセル → コース → お料理 → お飲み物 → 席・空間 → お知らせ → Instagram → 店舗情報 → 系列店バナー）
+index.html                トップ（ヒーロー → 写真カルーセル → コース → お料理 → お飲み物 → 席・空間 → お知らせ → Instagram → 店舗情報）
 information/index.html    お知らせ一覧（全 11 件の本文を掲載。トップからは #news-<id> で各記事へリンク）
 category/index.html       旧 URL (/category/) からの転送ページ → /information/
 concept/index.html        こだわり
@@ -15,7 +15,6 @@ course/index.html         コース（スタンダードコース・堪能コー
 food/index.html           お料理（税込価格）
 drink/index.html          お飲み物（税込価格）
 space/index.html          席・空間
-sister-store/index.html   系列店紹介（自店を除く 6 店舗）
 privacy/index.html        プライバシーポリシー
 css/style.css             共通スタイル（配色は既存サイトの Elementor kit の値を踏襲）
 js/main.js                ハンバーガーメニュー / ページトップ / カルーセル複製
